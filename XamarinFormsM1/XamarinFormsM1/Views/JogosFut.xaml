@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinFormsM1.JogosFut">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Jogos da Semana" 
+                   HorizontalOptions="Center"
+                   FontSize="Large"/>
+
+            <ListView x:Name="listJogos" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding Estadio}" 
+                                   HorizontalOptions="Center"
+                                   FontSize="Medium"/>
+                                <!-- Necessário colocar Horizontal, senão, não há como ver as demais informações-->
+                                <StackLayout Orientation="Horizontal">
+                                    <!-- Para funcionar a imagem, é preciso que seja alterado em propriedades de cada imagem, para "AndroidResource" -->
+                                    <Image 
+                                        Source="{Binding TimeCasa.Img}"
+                                        HorizontalOptions="StartAndExpand"
+                                        VerticalOptions="CenterAndExpand"
+                                        HeightRequest="50"/>
+                                    <Label 
+                                        Text="{Binding TimeCasa.Nome}"
+                                        HorizontalOptions="StartAndExpand"
+                                        VerticalOptions="CenterAndExpand"
+                                        FontSize="Medium"/>
+                                    <Label 
+                                        Text="{Binding PlacarCasa}"
+                                        HorizontalOptions="StartAndExpand"
+                                        HorizontalTextAlignment="Start"
+                                        VerticalOptions="CenterAndExpand"
+                                        FontSize="Medium"/>
+                                    <Label 
+                                        Text="X"
+                                        HorizontalOptions="CenterAndExpand"
+                                        VerticalOptions="CenterAndExpand"
+                                        FontSize="Large"/>
+                                    <Label 
+                                        Text="{Binding PlacarVisitante}"
+                                        HorizontalOptions="EndAndExpand"
+                                        HorizontalTextAlignment="End"
+                                        VerticalOptions="CenterAndExpand"
+                                        FontSize="Medium"/>
+                                    <Label 
+                                        Text="{Binding TimeVisitante.Nome}"
+                                        HorizontalOptions="EndAndExpand"
+                                        VerticalOptions="CenterAndExpand"
+                                        FontSize="Medium"/>
+                                    <Image 
+                                        Source="{Binding TimeVisitante.Img}"
+                                        HorizontalOptions="EndAndExpand"
+                                        VerticalOptions="CenterAndExpand"
+                                        HeightRequest="50"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button 
+                Text="Voltar" 
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

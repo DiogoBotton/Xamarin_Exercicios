@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinFormsM1.CalculadoraBasica">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Calculadora Básica"
+                HorizontalOptions="CenterAndExpand" 
+                   FontSize="Large"/>
+            <Label Text="Número A:" />
+            <Entry Keyboard="Numeric" x:Name="numA" />
+            <Label Text="Número B:" />
+            <Entry Keyboard="Numeric" x:Name="numB" />
+            <!-- Definindo os eventos no próprio StackLayout-->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Button Text="+" Clicked="Button_Clicked"/>
+                <Button Text="-" Clicked="Button_Clicked"/>
+                <Button Text="/" Clicked="Button_Clicked"/>
+                <Button Text="*" Clicked="Button_Clicked"/>
+            </StackLayout>
+            <Label x:Name="resultAB" 
+                   FontSize="Medium"
+                   HorizontalOptions="Center"/>
+            <StackLayout 
+                Orientation="Horizontal" 
+                Spacing="20"
+                HorizontalOptions="Center">
+                <Button Text="Voltar" Clicked="Button_Clicked_2"/>
+                <Button Text="Proxima" Clicked="Button_Clicked_1"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinFormsM1.Principal">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label 
+                Text="Verificar se um número é par ou ímpar:"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Large"/>
+            <Entry 
+                x:Name="num" 
+                Keyboard="Numeric"  
+                Placeholder="Digite"/>
+            <Label 
+                x:Name="result"   
+                HorizontalOptions="Center"
+                FontSize="Medium"/>
+            <StackLayout Orientation="Horizontal">
+                <Button 
+                    x:Name="btExecutar" 
+                    Text="Executar"
+                    HorizontalOptions="CenterAndExpand"/>
+                <Button 
+                    x:Name="btNext1" 
+                    Text="Proxima"
+                    HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
