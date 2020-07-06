@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinFormsM1.Views.LatitudeLongitude">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label 
+                Text="Latitude e Longitude" 
+                HorizontalOptions="CenterAndExpand" 
+                FontSize="Large"/>
+
+            <Label 
+                x:Name="lat" 
+                Text="Latitude: " 
+                Margin="10,0,0,0"/>
+            <Label 
+                x:Name="long" 
+                Text="Longitude: " 
+                Margin="10,0,0,0"/>
+
+            <Label 
+                Text="Clique no botão abaixo para adquirir sua localização e ser exibido no Google Maps"
+                HorizontalOptions="Center"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Button 
+                x:Name="btLatLong" 
+                Clicked="btLatLong_Clicked"
+                Text="Adquirir Coordenadas"
+                HorizontalOptions="CenterAndExpand"/>
+                
+                <Button 
+                x:Name="btExibirMap" 
+                Clicked="btExibirMap_Clicked"
+                Text="Exibir no Google Maps"
+                HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

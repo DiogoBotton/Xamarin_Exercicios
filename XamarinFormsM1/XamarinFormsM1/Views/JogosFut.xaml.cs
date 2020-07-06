@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XamarinFormsM1.Models;
+using XamarinFormsM1.Views;
 
 namespace XamarinFormsM1
 {
@@ -22,6 +23,11 @@ namespace XamarinFormsM1
         private void Button_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new CalculadoraBasica());
+        }
+
+        private void Button_Clicked_1(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new LatitudeLongitude());
         }
     }
 }
